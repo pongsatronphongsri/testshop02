@@ -9,7 +9,7 @@
     <div class="home-body container mt-4">   
         <h2 class="text-center">Welcome to Apna Cart <i class="fas fa-shopping-cart"></i></h2>
         <hr>
-        <h4>All products</h4>
+        <h4>All Menu</h4>
         <hr>
         <section class="product-holder my-3">
           <% if(data.length<1){ %> 
@@ -22,7 +22,7 @@
                     let item=data[index];
                     %>
                     
-                    <div class="product-card card col-md-3 ">
+                    <div class="product-card card mx-1 col-md-3  ">
                         <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light" style="border-radius: 12px 12px 0px 0px;">
                           
                           <% if(item.image !=undefined && item.image.data!=undefined){ %>

@@ -33,7 +33,7 @@
         <div class="d-flex align-items-center">
             <!-- Icon -->
             <% if(loginUser){ %>
-                <div class="userName me-3 d-none d-sm-block"><h5 class="">Hello <%= loginUser.username%></h5></div>
+                <div class="userName me-3 d-none d-sm-block"><h5 class=""><%= loginUser.username%></h5></div>
             <%}%> 
             <a class="text-reset me-3" href="/user/cart/">
                 <i class="fas fa-shopping-cart" style="font-size: 1.2rem;"></i>
