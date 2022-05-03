@@ -55,8 +55,8 @@ router.post("/user/order/verify", isLoggedIn,async (req, res) => {
       let amount=req.body.order.amount/100;
       const data = {
         user: req.user,
-        //orderid: req.body.razorpay_order_id,
-        //paymentid: req.body.razorpay_payment_id,
+        orderid: req.body.razorpay_order_id,
+        paymentid: req.body.razorpay_payment_id,
         orderList: userObj.cart,
         purchaseDate: Date.now(),
         finalPrice: amount,
