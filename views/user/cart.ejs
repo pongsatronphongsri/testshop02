@@ -37,7 +37,7 @@
                     <div class="itemProd col d-flex align-items-center">
                         <div class="prodInfo p-2">
                             <h5 class="name"><%=item.item.name%></h5>
-                            <h6>Price : &#x20B9; <%=item.item.price%></h6>
+                            <h6>Price :  <%=item.item.price%></h6>
                             <h6>Quantity: <%=item.quantity%></h6>
                         </div>
                     </div>
@@ -69,11 +69,11 @@
                             let discount=Math.round(20/100*finalPrice);
                             let totalPrice=finalPrice-discount;
                             %>
-                            <li class="py-2 d-flex justify-content-between"><h6>Price<span>(<%=data.length%> <%=itemDisplay%>)</span></h6> <h6>&#x20B9; <%=finalPrice%></h6></li>
-                            <li class="py-2 d-flex justify-content-between"><h6>Discount</h6> <h6 class="text-success">- &#x20B9; <%=discount%></h6></li>
+                            <li class="py-2 d-flex justify-content-between"><h6>Price<span>(<%=data.length%> <%=itemDisplay%>)</span></h6> <h6> <%=finalPrice%></h6></li>
+                            <li class="py-2 d-flex justify-content-between"><h6>Discount</h6> <h6 class="text-success">-  <%=discount%></h6></li>
                             <li class="py-2 d-flex justify-content-between"><h6>Delivery</h6> <h6 class='text-success'>FREE</h6></li>
                             <hr>
-                            <li class="d-flex justify-content-between"><h5>Total Price</h5> <h6>&#x20B9; <span id="finalPrice"><%=totalPrice%></span></h6></li>
+                            <li class="d-flex justify-content-between"><h5>Total Price</h5> <h6> <span id="finalPrice"><%=totalPrice%></span></h6></li>
                         </ul>
                     </div>                
                 </div>
