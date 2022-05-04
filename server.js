@@ -46,37 +46,12 @@ app.use(passport.session());
 // passport.use(new LocalStrategy(User.authenticate()));
 passport.use(new LocalStrategy(User.authenticate())); // for login logout session
 
-//Configuring Google Strategy
-/*passport.use(
-  new GoogleStrategy(
-    {
-      clientID: process.env.GA_clientID,
-      clientSecret: process.env.GA_clientSecret,
-      callbackURL: process.env.GA_callbackURL,
-    },
-    async function (accessToken, refreshToken, profile, done) {
-      const profileDetails = {
-        username: profile.displayName,
-        googleid: profile.id,
-        email: profile.emails[0].value,
-        photo: profile.photos[0].value,
-      };
-      await User.findOrCreate(profileDetails, function (err, user) {
-        return done(err, user);
-      });
-    }
-  )
-);*/
 
 //SERIALIZE AND DESERIALIZING
 passport.serializeUser(User.serializeUser());
-// passport.serializeUser((user,done)=>{
-//     done(null,user);
-// })
+
 passport.deserializeUser(User.deserializeUser());
-// passport.deserializeUser((user,done)=>{
-//     done(null,user)
-// })
+
 //Serializing and Deserializing for google authenticate
 
 app.use(methodOverride("_method"));
@@ -85,7 +60,6 @@ app.set("views", path.join(__dirname, "/views"));
 app.use(express.static(path.join(__dirname, "/public")));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-//seed();
 //This will automatically call the flash Object
 app.use((req, res, next) => {
   res.locals.status = req.flash("status");
